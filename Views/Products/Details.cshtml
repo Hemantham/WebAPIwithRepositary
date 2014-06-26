@@ -1,0 +1,43 @@
+﻿@model MvcWorking.Models.Product
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Product</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Name)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Description)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Image)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Image)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Category.CategryName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Category.CategryName)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

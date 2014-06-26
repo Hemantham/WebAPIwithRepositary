@@ -1,0 +1,22 @@
+﻿@model MvcWorking.Models.Category
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Category</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CategryName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CategryName)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
